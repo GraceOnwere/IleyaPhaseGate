@@ -21,7 +21,7 @@ export const duplicateCheck = (array) =>{
 
     let counter = 0;
 
-    let newArray = Array(count).fill(0);
+    let newArray = [];
 
     for (let outerIndexCount = 0; outerIndexCount < array.length; outerIndexCount++){
 
@@ -29,7 +29,7 @@ export const duplicateCheck = (array) =>{
         
         if (array[outerIndexCount] == array[innerIndexCount]) {
 
-        newArray[counter++] = array[outerIndexCount];
+        newArray.push(array[outerIndexCount]);
         break;
         }
         }
@@ -99,3 +99,4 @@ export const moveAllZerosIn = (array) =>{
     return array;
 
 }
+console.log(duplicateCheck([1, 2, 3, 2, 4, 3]))
